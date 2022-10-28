@@ -3,7 +3,7 @@ Just a small script for pulling vendor information from mac-adresses using the m
 
 ## Usage ##
 ```
-> mac.exe DE:AD:BE:EEF:13:37
+> mac.exe DE:AD:BE:EF:13:37
 Apple, Inc.
 ```
 
