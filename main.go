@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"io/ioutil"
+	"io"
 	"log"
 	"net/http"
 	"os"
@@ -15,12 +15,12 @@ func main() {
 
 	resp, err := http.Get(macurl + mac)
 	if err != nil {
-		log.Fatalln("Error accessing %v %v", macurl, err)
+		log.Fatalf("Error accessing %v %v", macurl, err)
 	}
 
 	defer resp.Body.Close()
 
-	body, err := ioutil.ReadAll(resp.Body)
+	body, err := io.ReadAll(resp.Body)
 	if err != nil {
 		log.Fatalln("Error reading the response", err)
 	}
