@@ -14,7 +14,7 @@ func GetMac(mac string) string {
 
 	resp, err := http.Get(API + mac)
 	if err != nil {
-		log.Fatalf("Error accessing %v %w", API, err)
+		log.Fatalln("Error requesting http: %w", err)
 	}
 
 	defer resp.Body.Close()
